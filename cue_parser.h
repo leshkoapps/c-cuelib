@@ -17,7 +17,7 @@
  */
 typedef enum MetaDataField {
 	ALBUM_TITLE = 1,
-	ALBUM_PREFORMER,
+	ALBUM_PERFORMER,
 	ALBUM_DATE,
 	COMMENT,
 	FILENAME,
@@ -33,5 +33,6 @@ typedef enum MetaDataField {
 
 CueSheet *parse_cue(const char *filename);
 char *get_string_metadata(CueSheet *cue_sheet, int track_index, MetaDataField filed);
+int get_int_metadata(CueSheet *cue_sheet, int track_index, MetaDataField filed);
 
 #endif

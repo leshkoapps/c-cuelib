@@ -389,7 +389,7 @@ char *get_string_metadata(CueSheet *cue_sheet, int track_index, MetaDataField fi
 	case ALBUM_TITLE:
 		return cue_sheet->title;
 
-	case ALBUM_PREFORMER:
+	case ALBUM_PERFORMER:
 		return cue_sheet->performer;
 
 	case ALBUM_DATE:
