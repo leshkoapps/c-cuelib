@@ -9,9 +9,9 @@ Pod::Spec.new do |s|
   s.source        = { :git => 'https://github.com/leshkoapps/c-cuelib', 
     :tag => s.version.to_s }
 
-  s.source_files        = '*.{h,c}'
+  s.source_files        = 'cue_common.h', 'cue_parser.h', 'cue_parser.c', 'cue_serializer.h', 'cue_serializer.c', 'cue_utils.h', 'cue_utils.c'
   s.public_header_files = '*.h'
-
+ 
   s.ios.deployment_target = '6.0'
   s.osx.deployment_target = '10.8'
 
