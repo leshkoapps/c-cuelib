@@ -29,6 +29,7 @@ typedef enum MetaDataField {
 	TRACK_TITLE,
 	TRACK_START,
 	TRACK_END,
+    TRACK_FILENAME,
 } MetaDataField;
 
 CueSheet *parse_cue(const char *filename);

@@ -236,6 +236,9 @@ static void parse_track(CueSheet *cue_sheet, const char *input)
 	int track_num = atoi(input);
 	TrackData *track_data = &cue_sheet->tracks_data[cue_sheet->total_track - 1];
 	track_data->track_num = track_num;
+    
+    /* copy current filename to track filename*/
+    strcpy(track_data->filename, cue_sheet->filename);
 }
 
 /* calculate mm:ss:ff to millisecond, ff = frames (75 per second) */
@@ -409,6 +412,9 @@ char *get_string_metadata(CueSheet *cue_sheet, int track_index, MetaDataField fi
 
 	case TRACK_PERFORMER:
 		return strlen(track_data->performer) ? track_data->performer : cue_sheet->performer;
+            
+    case TRACK_FILENAME:
+        return strlen(track_data->filename) ? track_data->filename : cue_sheet->filename;
 
 	case TRACK_TITLE:
 		return track_data->title;
